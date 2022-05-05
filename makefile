@@ -1,2 +1,2 @@
 default:
-	g++ main.cpp -o out
+	g++ main.cpp -o OLAS

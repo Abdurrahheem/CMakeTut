@@ -1,11 +1,12 @@
 #include <iostream>
 #include <adder.h>
 #include <GLFW/glfw3.h>
+#include <OLASConfig.h>
 
-int main(){
+int main(int argc, char* argv[]){
     std::cout << "Hey, its me again, adding real numbers \n";
     std::cout << "NEW Sum of two " << add(72.1f, 72.8f) << "\n"; 
-
+    std::cout << argv[0] << " Version " << OLAS_VERSION_MAJOR << "." << OLAS_VERSION_MINOR << "\n";
 
     
     GLFWwindow* window;

@@ -1,11 +1,18 @@
 #include <iostream>
-#include <adder.h>
 #include <GLFW/glfw3.h>
 #include <OLASConfig.h>
 
+#ifdef USE_ADDER
+    #include <adder.h>
+#endif
+
 int main(int argc, char* argv[]){
     std::cout << "Hey, its me again, adding real numbers \n";
+#ifdef USE_ADDER
     std::cout << "NEW Sum of two " << add(72.1f, 72.8f) << "\n"; 
+#else
+    std::cout << "Old Sum of two " << 72.1f + 72.8f << "\n"; 
+#endif
     std::cout << argv[0] << " Version " << OLAS_VERSION_MAJOR << "." << OLAS_VERSION_MINOR << "\n";
 
     
